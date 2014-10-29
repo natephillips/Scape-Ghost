@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {{! Document Settings }}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  {{! Page Meta }}
+  <title>{{meta_title}}</title>
+  <meta name="description" content="{{meta_description}}" />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+  {{! Styles'n'Scripts }}
+  <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/post.css"}}" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oswald:300,400" />
+  <link href='http://fonts.googleapis.com/css?family=Lily+Script+One&text="' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
+
+  <!--[if lt IE 9]>
+    <script src="dist/html5shiv.js"></script>
+  <![endif]-->
+
+  {{! Ghost outputs important style and meta data with this tag }}
+  {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+
+  {{! Everything else gets inserted here }}
+
+  <div id="scape-menu-toggle" class="icon-menu"></div>
+  <section id="scape-header" {{#if @blog.cover}}style="background-image: url('{{@blog.cover}}');"{{/if}}>
+    {{> header}}
+  </section>
+
+  <section id="scape-content">
+    <div id="scape-header-image-wrapper"{{#if post.image}} style="background-image: url('{{post.image}}');"{{/if}}>
+      <span><span class="container">
+      </span></span>
+    </div>
+
+    <div class="wrapper">
+      <div class="container">
+        {{{body}}}
+
+        <section id="scape-footer">
+          {{> footer}}
+        </section>
+      </div>
+    </div>
+  </section>
+
+  {{! Ghost outputs important scripts and data with this tag }}
+  {{ghost_foot}}
+
+  <script type="text/javascript" rel="javascript" src="{{asset "js/moment.min.js"}}"></script>
+  <script type="text/javascript" rel="javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+  <script type="text/javascript" rel="javascript" src="{{asset "js/main.js"}}"></script>
+
+  <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+
+  {{> analytics}}
+
+</body>
+</html>

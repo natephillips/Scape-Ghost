@@ -1,0 +1,21 @@
+{{#if author}}
+  {{#if author.name}}
+    <section id="scape-author">
+      <div class="container">
+        <div class="title">
+          {{#if author.image}}
+            <span class="image rounded"><span><img src="{{author.image}}" /></span></span>
+          {{else}}
+            <h3>About the author</h3>
+          {{/if}}
+        </div>
+        <div class="information">
+          <h3>{{author}}</h3>
+          {{#if author.location}}<p>{{author.location}}</p>{{/if}}
+          {{#if author.bio}}<p>{{author.bio}}</p>{{/if}}
+          {{#if author.website}}<p><a href="{{author.website}}">{{author.website}}</a></p>{{/if}}
+        </div>
+      </div>
+    </section>
+  {{/if}}
+{{/if}}

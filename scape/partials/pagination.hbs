@@ -1,0 +1,17 @@
+<nav id="scape-pagination" role="pagination">
+  <div class="container">
+    {{#if prev}}
+      <div class="col-1 newer-posts">
+        <a class="button accent" href="{{page_url prev}}" rel="prev">&laquo; Newer</a>
+      </div>
+    {{/if}}
+
+    <span class="{{#if prev}}{{else}}col-offset-1 {{/if}}col-2 page-number">{{page}} of {{pages}}</span>
+
+    {{#if next}}
+      <div class="col-1 older-posts">
+        <a class="button accent" href="{{page_url next}}" rel="next">Older &raquo;</a>
+      </div>
+    {{/if}}
+  </div>
+</nav>

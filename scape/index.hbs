@@ -1,0 +1,29 @@
+{{!< default}}
+
+{{#foreach posts}}
+  {{#if @first}}
+    <article class="scape-post-detail {{post_class}}">
+      <div class="post-meta">
+        <h1 class="post-title">{{title}}</h1>
+
+        <div>
+          <time datetime="{{date format='YYYY-MM-DD'}}">
+            <span class="day">Posted on {{date format="D"}}</span>
+            <span class="month">{{date format="MMMM"}}</span>
+          </time>
+        </div>
+        <div>
+          {{#if tags}}<p class="tags"> in {{tags}}</p>{{/if}}
+        </div>
+      </div>
+
+      <div class="post-content">
+        {{content}}
+      </div>
+
+      {{> author}}
+
+      {{> disquss}}
+    </article>
+  {{/if}}
+{{/foreach}}

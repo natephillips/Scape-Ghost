@@ -1,0 +1,173 @@
+.scape-post-preview {
+  position: relative;
+  padding: 40px 20px 40px 60px;
+  color: lightgrey;
+  font-size: 14px;
+  overflow: hidden;
+  z-index: 0;
+}
+.scape-post-preview > * {
+  position: relative;
+  z-index: 10;
+}
+.scape-post-preview h2 {
+  font-size: 16px;
+}
+.scape-post-preview .meta {
+  font-style: italic;
+}
+.scape-post-preview, .scape-post-preview:before, .scape-post-preview:after {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.scape-post-preview:after {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 0 #e56442;
+  -moz-box-shadow: 0 0 0 0 #e56442;
+  box-shadow: 0 0 0 0 #e56442;
+  content: " ";
+  position: absolute;
+  display: block;
+  background: #868686;
+  border: solid 2px #868686;
+  top: 0;
+  left: 31px;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  margin: auto;
+  z-index: 1;
+}
+.scape-post-preview.featured:before {
+  position: absolute;
+  color: #868686;
+  top: 0;
+  left: 8px;
+  bottom: 0;
+  line-height: 15px;
+  height: 15px;
+  width: 15px;
+  vertical-align: middle;
+  text-align: left;
+  margin: auto;
+}
+.scape-post-preview:hover {
+  color: #f9f9f9;
+}
+.scape-post-preview:hover:before {
+  color: #f9f9f9;
+}
+.scape-post-preview:hover:after {
+  -webkit-transform: scale(1.6, 1.6);
+  -moz-transform: scale(1.6, 1.6);
+  -ms-transform: scale(1.6, 1.6);
+  -o-transform: scale(1.6, 1.6);
+  transform: scale(1.6, 1.6);
+  background: #f9f9f9;
+}
+
+#scape-header-image-wrapper {
+  display: table;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#scape-header-image-wrapper[style^=background] {
+  height: 400px;
+  color: #f9f9f9;
+}
+#scape-header-image-wrapper[style^=background] > span {
+  background: rgba(0, 0, 0, 0.42);
+  padding-bottom: 60px;
+}
+#scape-header-image-wrapper[style^=background] a {
+  color: #f9f9f9;
+  text-decoration: underline;
+}
+#scape-header-image-wrapper[style^=background] a:hover {
+  color: #e56442;
+}
+#scape-header-image-wrapper > span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#scape-header-image-wrapper h1 {
+  display: inline-block;
+  font-size: 31px;
+  border-bottom: solid 2px #f9f9f9;
+  padding-bottom: 10px;
+}
+#scape-header-image-wrapper p,
+#scape-header-image-wrapper time {
+  display: inline-block;
+  margin: 0;
+}
+
+.scape-post-detail {
+  padding: 60px 0;
+}
+.scape-post-detail .post-content + * {
+  margin-top: 60px;
+}
+.scape-post-detail *:last-child {
+  padding-bottom: 0 !important;
+}
+
+#scape-author {
+  position: relative;
+  padding: 60px 0;
+  text-align: center;
+}
+#scape-author:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 220px;
+  height: 1px;
+  margin-left: -110px;
+  background: #aeaeae;
+}
+#scape-author .image {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border: solid 3px #aeaeae;
+  overflow: hidden;
+}
+#scape-author p {
+  margin: 0;
+}
+#scape-author .title h3 {
+  margin-top: 0;
+}
+
+#scape-post-comments {
+  position: relative;
+  padding: 60px 0;
+  text-align: center;
+}
+#scape-post-comments:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 220px;
+  height: 1px;
+  margin-left: -110px;
+  background: #aeaeae;
+}
+#scape-post-comments .title h3 {
+  margin-top: 0;
+}
